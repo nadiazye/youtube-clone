@@ -19,10 +19,12 @@ body {
 .video-section:first-child {
 border-top: none;
 }
+
 .video-container {
     display: flex;
     flex-direction:column;
 }
+
 .thumbnail {
     position: relative;
     display: flex;
@@ -36,6 +38,7 @@ border-top: none;
     right: 5px;
     bottom: 5px;
     padding: .1em .3em;
+    border-radius: .3em;
     font-size: .9rem;
 }
 
@@ -77,11 +80,13 @@ border-top: none;
 .video-channel-name {
     margin-bottom: .1rem;
     text-decoration: none;
-    color: #555;
+    transition: color 150ms;
 }
+
 .video-channel-name:hover {
     color: #111;
 }
+
 .video-channel-name,
 .video-metadata {
     color: #555;
@@ -137,7 +142,7 @@ border-top: none;
     background-color: #DDD;
 }
 
-.category-active{
+.category-active {
     background-color:#606060;
     color: white;
     border-color: #EEE;
@@ -153,9 +158,9 @@ border-top: none;
     align-items: center;
     padding: 1rem;
 }
-
+/* i changed the px size from 20px to 50, after review lets see if anythings rlly different */
 .youtube-logo {
-    height: 20px;
+    height: 50px;
 }
 
 .search-bar {
@@ -185,13 +190,13 @@ border-top: none;
     cursor: pointer;
 }
 
-.searchbtn :hover {
+.search-btn :hover {
     background-color: #F0F0F0;
 }
 
 .menu-icons {
     display: grid; 
-    grid-template-columns: (4, auto);
+    grid-template-columns: repeat(4, auto);
     align-items: center;
     gap: 1.5rem;
 }
